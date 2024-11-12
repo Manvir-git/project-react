@@ -1,0 +1,117 @@
+.body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-description {
+    margin: 20px;
+
+}
+
+.product-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #004c86;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #00ba19;
+    color: beige;
+}
+
+ul {
+    color: #469248;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family: 'Arial', sans-serif;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    font-family: 'Arial', sans-serif;
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 3000;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+
+.image-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.image-right img {
+    width: 750px; /* Adjust this value to make the image smaller */
+    height: auto; /* Ensures the aspect ratio is maintained */
+}
+
+
+
