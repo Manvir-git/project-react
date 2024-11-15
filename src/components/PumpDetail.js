@@ -1,54 +1,39 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import './read.css'; // Make sure this CSS file contains the applied styles
-import v4 from '../components/images/v4.png'
-import v40 from '../components/images/read/v4table.png'
-import logo from '../components/images/logo.png'
-// Sample data for pumps
-const pumps = [
-    {
-        id: 'v4',
-        name: 'V-50 feet Per Stage Borewell Submersible Pumps',
-        price: '₹79,000.00',
-        features: [
-            'Specially designed thrust bearing ensures highest reliability',
-            'High Grade Electrical Stamping CRNGO-M47 for higher efficiency',
-            'Wide voltage operation from 250 -440V'
-        ],
-        image: v4, // Adjust path if necessary
-        rightImage:v40, // Adjust path if necessary
-    }
-];
+import { useParams, useNavigate } from 'react-router-dom';
+import '../css/read.css'; 
+import { pumps } from '../data/pumps'; // Ensure this path is correct
 
 const PumpDetail = () => {
-    const { pumpId } = useParams();
+    const { pumpId } = useParams(); // Extract the pumpId from the URL
+    const navigate = useNavigate();
+
+    // Ensure pumpId is valid by finding the corresponding pump
     const pump = pumps.find(p => p.id === pumpId);
 
     if (!pump) {
-        return <div>Pump not found</div>;
+        // If no pump found, show an error message
+        return <div>Pump not found. Please go back to the <a href="/products">products page</a>.</div>;
     }
+
+    // Create an array of pump IDs in the order they appear
+    const pumpIds = pumps.map(p => p.id);
+
+    // Find the index of the current pump
+    const currentIndex = pumpIds.indexOf(pumpId);
+
+    // Determine the previous and next pump IDs (circular navigation)
+    const prevPump = pumpIds[(currentIndex - 1 + pumpIds.length) % pumpIds.length]; 
+    const nextPump = pumpIds[(currentIndex + 1) % pumpIds.length];
+
+    // Function to navigate to a specific pump detail
+    const handleNavigation = (id) => {
+        navigate(`/pumpDetail/${id}`);
+    };
 
     return (
         <div className="body">
-            <nav className="navbar">
-                <div className="container">
-                    <div className="navbar-left">
-                        <a href="/" className="logo">
-                            <img src={logo} alt="Lally Trading Company Logo" />
-                            <span className="company-name">Lally Trading Company</span>
-                        </a>
-                    </div>
-                    <div className="navbar-right">
-                        <ul className="nav-links">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/products">Products</a></li>
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
+            {/* Product Description */}
             <div className="product-description">
                 <img src={pump.image} className="product-image" alt={pump.name} />
                 <div>
@@ -65,11 +50,28 @@ const PumpDetail = () => {
                     </div>
 
                     <a href="https://lallytradingcompany.onrender.com" className="buy-button">Send Enquiry</a>
-
-                    <div className="image-right">
-                        <img src={pump.rightImage} alt="Right view of pump" />
-                    </div>
                 </div>
+            </div>
+
+            {/* Image for right view of the pump */}
+            <div className="chart">
+                <img src={pump.rightImage} alt="Right view of pump" />
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="navigation-buttons">
+                <button 
+                    className="nav-btn left-btn"
+                    onClick={() => handleNavigation(prevPump)}
+                >
+                    &#8592; {/* Left Arrow (back) */}
+                </button>
+                <button 
+                    className="nav-btn right-btn"
+                    onClick={() => handleNavigation(nextPump)}
+                >
+                    &#8594; {/* Right Arrow (forward) */}
+                </button>
             </div>
         </div>
     );

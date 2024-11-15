@@ -18,22 +18,39 @@
 
 // export default App;
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import PumpDetail from './components/PumpDetail';
-import HomePage from './components/Homepage'; // Assuming you have a HomePage component
-import Products from './components/Products';
-function App() {
-    return (
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import PumpDetail from './components/PumpDetail';
+// import HomePage from './components/Homepage'; // Assuming you have a HomePage component
+// import Products from './components/Products';
+// function App() {
+//     return (
 
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} /> {/* Homepage route */}
-                <Route path="/products" element={<Products />} /> 
-                <Route path="/pump/:pumpId" element={<PumpDetail />} /> {/* Pump detail route */}
-            </Routes>
-        </Router>
-    );
+//         <Router>
+//             <Routes>
+//                 <Route path="/" element={<HomePage />} /> {/* Homepage route */}
+//                 <Route path="/products" element={<Products />} /> 
+//                 <Route path="/pump/:pumpId" element={<PumpDetail />} /> {/* Pump detail route */}
+//             </Routes>
+//         </Router>
+//     );
+// }
+
+// export default App;
+
+
+import React from 'react'
+import Header from './Header/Header'
+import Footer from './Footer/footer'
+import { Outlet } from 'react-router-dom'
+function App() {
+  return (
+    <>
+    <Header/>
+    <Outlet/>
+    <Footer/>
+    </>
+  )
 }
 
-export default App;
+export default App

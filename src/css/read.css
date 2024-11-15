@@ -1,0 +1,96 @@
+.body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-description {
+    margin: 20px;
+
+}
+
+.product-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #004c86;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #00ba19;
+    color: beige;
+}
+
+
+.chart {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.chart img {
+    width: 750px; /* Adjust this value to make the image smaller */
+    height: auto; /* Ensures the aspect ratio is maintained */
+}
+
+.navigation-buttons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    background-color: #013164;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    background-color: #0056b3;
+    opacity: 100%;
+}
+
+.left-btn {
+    margin-left: 10px;
+    left: 0;
+}
+
+.right-btn {
+    margin-right: 30px;
+    right: 0;
+}
+
+
