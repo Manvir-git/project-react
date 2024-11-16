@@ -1,8 +1,3 @@
-
-
-import v4 from '../images/v4.png'
-import v40 from '../images/read/v4table.png'
-
 const importAll = (r) => {
     let images = {};
     r.keys().forEach((item) => {

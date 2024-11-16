@@ -30,7 +30,7 @@ const Products = () => {
 
   useEffect(() => {
     setPumps(pumpData);
-  },[pumpData]);
+  },[]);
 
   return (
     <div>
