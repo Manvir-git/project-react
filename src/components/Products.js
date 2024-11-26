@@ -13,7 +13,7 @@ const Products = () => {
 
 useEffect(() => {
   // Fetch agricultural pumps
-  axios.get('http://localhost:5001/api/agpumps')
+  axios.get('https://pumpsbackend.onrender.com/api/agpumps')
     .then(response => setAgriculturalPumps(response.data))
     .catch(error => console.error('Error fetching agricultural pumps:', error));
 }, []);
@@ -69,7 +69,7 @@ useEffect(() => {
               style={{ cursor: 'pointer' }} // Change cursor to pointer
             >
               <img
-                src={`http://localhost:5001/uploads/${pump.image}`}
+                src={`https://pumpsbackend.onrender.com/uploads/${pump.image}`}
                 alt={pump.name}
                 className="pump-image"
                 onMouseOver={(e) => e.currentTarget.classList.add('image-3d')}

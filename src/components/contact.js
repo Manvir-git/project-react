@@ -23,7 +23,7 @@ const ContactUs = () => {
     e.preventDefault(); // Prevent default form behavior
 
     try {
-      const response = await fetch('http://localhost:5001/api/feedbacks', {
+      const response = await fetch('https://pumpsbackend.onrender.com/api/feedbacks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

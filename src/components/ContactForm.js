@@ -32,7 +32,7 @@ const ContactForm = () => {
         e.preventDefault();
     
         try {
-            const response = await axios.post('http://localhost:5001/api/enqueries', formData);
+            const response = await axios.post('https://pumpsbackend.onrender.com/api/enqueries', formData);
             if (response.status === 200) {
                 setIsSubmitted(true); // Set state to show the "Thank you" message
                 setTimeout(() => {
