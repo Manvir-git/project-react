@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../css/ContactUs.module.css'; // Import the CSS module
-import {useState} from 'react';
+
 const ContactUs = () => {
-
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +9,7 @@ const ContactUs = () => {
   });
 
   const [statusMessage, setStatusMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false); // Popup state
 
   // Handle input changes
   const handleChange = (e) => {
@@ -33,7 +32,12 @@ const ContactUs = () => {
 
       if (response.ok) {
         setStatusMessage('Feedback submitted successfully!');
-        setFormData({ fname: '', femail: '', fin: '' }); // Clear the form
+        setIsSubmitted(true); // Show popup
+        setFormData({ name: '', email: '', message: '' }); // Clear the form
+        setTimeout(() => {
+          setIsSubmitted(false); // Hide popup after 3 seconds
+          window.location.reload(); // Refresh the page
+        }, 3000);
       } else {
         setStatusMessage('Error submitting feedback. Please try again.');
       }
@@ -98,53 +102,64 @@ const ContactUs = () => {
 
             {/* Contact Form */}
             <div className={styles.contactForm}>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <h2>Feedback</h2>
+              <form id="contact-form" onSubmit={handleSubmit}>
+                <h2>Feedback</h2>
 
-        <div className={styles.inputBox}>
-          <input
-            type="text"
-            required
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder=" "
-          />
-          <span>Full Name</span>
-        </div>
+                <div className={styles.inputBox}>
+                  <input
+                    type="text"
+                    required
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder=" "
+                  />
+                  <span>Full Name</span>
+                </div>
 
-        <div className={styles.inputBox}>
-          <input
-            type="email"
-            required
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder=" "
-          />
-          <span>Email</span>
-        </div>
+                <div className={styles.inputBox}>
+                  <input
+                    type="email"
+                    required
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder=" "
+                  />
+                  <span>Email</span>
+                </div>
 
-        <div className={styles.inputBox}>
-          <textarea
-            required
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder=" "
-          ></textarea>
-          <span>Type your Message...</span>
-        </div>
+                <div className={styles.inputBox}>
+                  <textarea
+                    required
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder=" "
+                  ></textarea>
+                  <span>Type your Message...</span>
+                </div>
 
-        <div className={styles.inputBox}>
-          <input type="submit" value="Send" />
-        </div>
+                <div className={styles.inputBox}>
+                  <input type="submit" value="Send" />
+                </div>
 
-        {statusMessage && <p className={styles.statusMessage}>{statusMessage}</p>}
-      </form>
-    </div>
+                {statusMessage && <p className={styles.statusMessage}>{statusMessage}</p>}
+              </form>
+            </div>
           </div>
         </div>
+
+        {/* Show popup message when submitted */}
+        {isSubmitted && (
+          <div className="popup show">
+            <div className="popup-content">
+              <h3>We have received your Feedback</h3>
+              
+              <h1>Thank you!</h1>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
