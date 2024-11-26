@@ -1,0 +1,156 @@
+.contactPage {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.contactUs {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: auto;
+  max-width: 800px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sectionHeader h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+
+.sectionHeader p {
+  color: #777;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contactInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfoIcon {
+  font-size: 24px;
+  color: #007bff; /* Change icon color */
+  margin-right: 15px;
+}
+
+.contactInfoContent h4 {
+  margin: 0;
+  color: #333;
+}
+
+.contactInfoContent p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.contactInfoContent a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contactInfoContent a:hover {
+  text-decoration: underline;
+}
+
+.contactForm {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.3s;
+  color: #aaa;
+}
+
+.inputBox input:focus + span,
+.inputBox input:not(:placeholder-shown) + span,
+.inputBox textarea:focus + span,
+.inputBox textarea:not(:placeholder-shown) + span {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.inputBox input[type='submit'] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputBox input[type='submit']:hover {
+  background-color: #0056b3;
+}

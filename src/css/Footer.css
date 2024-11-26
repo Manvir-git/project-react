@@ -1,0 +1,87 @@
+/* Footer Styles */
+.footer {
+  background-color: #0a1733; /* Dark blue background */
+  color: #ffffff;
+  padding: 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: auto;
+}
+
+.contact-section {
+  flex: 1;
+  min-width: 280px;
+  margin: 20px;
+  text-align: left;
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #76c7ff; /* Light blue text */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-section p,
+.contact-section ul li {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  color: #76c7ff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #2c3e50;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #76c7ff;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.contact-section i {
+  color: #76c7ff; /* Icon color */
+  margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-section {
+    margin: 20px 0;
+  }
+}
