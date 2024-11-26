@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import prod from '../images/prod.png';
 import pump2 from '../images/pump2.png';
+
 import bg2 from '../images/Pump3.jpg';
 import bg3 from '../images/Pump2.jpg'
 
@@ -22,7 +23,7 @@ function Home() {
   // Fetch pumps data from the backend
   useEffect(() => {
     axios
-      .get('http://localhost:5001/api/pumps')
+      .get('https://pumpsbackend.onrender.com/api/pumps')
       .then(response => setResidentialPumps(response.data))
       .catch(error => console.error('Error fetching residential pumps:', error));
   }, []);
@@ -185,7 +186,7 @@ function Home() {
               style={{ cursor: 'pointer' }} // Change cursor to pointer
             >
               <img
-                src={`http://localhost:5001/uploads/${pump.image}`}
+                src={`https://pumpsbackend.onrender.com/uploads/${pump.image}`}
                 alt={pump.name}
                 className="pump-image"
                 onMouseOver={(e) => e.currentTarget.classList.add('image-3d')}
