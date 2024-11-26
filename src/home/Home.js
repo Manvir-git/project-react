@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import prod from '../images/prod.png';
 import pump2 from '../images/pump2.png';
-import bg1 from '../images/Pump5.jpg';
 import bg2 from '../images/Pump3.jpg';
 import bg3 from '../images/Pump2.jpg'
 
