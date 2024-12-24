@@ -1,22 +1,22 @@
-// import React from 'react';
-// import './App.css'; // Import main styles if any
-// import Navbar from './components/Navbar';
-// import Header from './components/Header';
-// import MainContent from './components/MainContent';
-// import Footer from './components/Footer';
+// // import React from 'react';
+// // import './App.css'; // Import main styles if any
+// // import Navbar from './components/Navbar';
+// // import Header from './components/Header';
+// // import MainContent from './components/MainContent';
+// // import Footer from './components/Footer';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <Navbar />
-//       <Header />
-//       <MainContent />
-//       <Footer />
-//     </div>
-//   );
-// }
+// // function App() {
+// //   return (
+// //     <div className="App">
+// //       <Navbar />
+// //       <Header />
+// //       <MainContent />
+// //       <Footer />
+// //     </div>
+// //   );
+// // }
 
-// export default App;
+// // export default App;
 
 // import React from 'react';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -54,3 +54,6 @@ function App() {
 }
 
 export default App
+
+
+

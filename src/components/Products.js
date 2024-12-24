@@ -77,7 +77,7 @@ useEffect(() => {
               />
               <div className="pump-info">
                 <p className="pump-name">{pump.name}</p>
-                <p className="pump-price">{pump.price}</p>
+                <p className="pump-price">MRP: ₹{pump.price}</p>
                 <Link to={`/pumpDetail/${pump.id}`} className="read-more-btn">Read more</Link>
               </div>
             </div>
