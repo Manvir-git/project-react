@@ -27,50 +27,7 @@ body {
 }
 
 
-  
 
-  
-
-/* Header Styles */
-.header {
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 2.25rem 0; /* 100px */
-    background-size: cover;
-    height: 28.75rem; /* 460px */
-    position: relative;
-}
-
-.header h1 {
-    font-size: 2.8125rem; /* 45px */
-    color: #ffffff;
-    margin-bottom: 1.25rem; /* 20px */
-}
-
-
-
-.read-more-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem; /* 12px 24px */
-    background-color: #54bef3;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.3125rem; /* 5px */
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background-color: #3797c6;
-}
-
-
-
-
-.section-description {
-    font-size: 1.25rem; /* 20px */
-    margin-bottom: 3.125rem; /* 50px */
-}
 
 /* Gallery Styles */
 .pump-gallery {
@@ -81,7 +38,7 @@ body {
 
 .pump-item {
     display: grid;
-    background-color: #f5f5f5;
+    background-color: rgb(247, 247, 247);
     padding: 1.25rem; /* 20px */
     border-radius: 0.9375rem; /* 15px */
     text-align: center;
@@ -119,48 +76,6 @@ body {
     background-color: #0088cc;
 }
 
-/* New Section Styles */
-.container2 {
-    display: flex;
-    margin-bottom: 1.875rem; /* 30px */
-    width: 100%;
-    max-width: 1200px;
-    background-color: #fff;
-    border-radius: 0.5rem; /* 8px */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
-}
-
-.content {
-    flex: 2;
-    padding: 1.25rem; /* 20px */
-}
-
-.main-section {
-    margin-bottom: 1.25rem; /* 20px */
-    border: 1px solid #000000;
-}
-
-.side-sections {
-    display: flex;
-    justify-content: space-between;
-}
-
-.side-section {
-    flex-basis: calc(50% - 0.625rem); /* 50% width with spacing */
-    padding: 0.625rem; /* 10px */
-    border-radius: 0.3125rem; /* 5px */
-    border-color: #000000;
-}
-
-.image-container {
-    flex: 2;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 h3 {
     font-weight: 100;
@@ -178,17 +93,6 @@ p3 {
     padding-left: 5.625rem; /* 90px */
 }
 
-.new {
-    background-color: #d5e2fda3;
-    height: 12.5rem; /* 200px */
-}
-
-.new h5 {
-    font-size: 2.5rem; /* 40px */
-    font-weight: 100;
-    margin-top: 1.875rem; /* 30px */
-    text-align: center;
-}
 
 
 /* Sliding animation */
@@ -217,7 +121,7 @@ p3 {
   }
 
   .container1 {
-    background-color: #f8f8f8; /* Light gray background */
+  background-color: #e3ecffa3; /* Light gray background */
     padding: 20px; /* Add spacing inside the container */
    margin-bottom: 1.3rem; /* Center the container and add vertical spacing */
     text-align: center; /* Center-align text */

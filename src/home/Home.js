@@ -160,17 +160,20 @@ function Home() {
           ))}
         </div>
       </div>
+
     </div>
 
 
       {/* Product Introduction */}
       <div className="b animate-on-scroll">
+
     <p className="b2">
+    <div className="welcome animate-on-scroll">Welcome to Our Store </div>
       Explore our range of Agricultural submersible pumps <br />
       The product range covers a wide application such as agriculture,
       water supply to townships, industries, sewage, and drainage.
     </p>
-    <Link to="/products" className="btn">View Products</Link>
+    <Link to="/about" className="btn">Read more</Link>
 </div>
 
 

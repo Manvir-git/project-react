@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo.png';
 import '../css/Header.css';
 
 function Header() {
-  const [opacity, setOpacity] = useState(1); // Initial opacity set to 1 (fully opaque)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY; // Get the current scroll position
-      const newOpacity = scrollY > 20 ? 0.5 : 1; // Set opacity to 50% only after 20px scroll
-      setOpacity(newOpacity); // Update the opacity state
-    };
-
-    window.addEventListener('scroll', handleScroll); // Add scroll event listener
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup on unmount
-    };
-  }, []);
+  const location = useLocation();
 
   return (
-    <nav className="navbar" id="navbar" style={{ opacity: opacity }}>
+    <nav className="navbar" id="navbar">
       <div className="container">
         <div className="navbar-left">
           <Link to="/" className="logo">
@@ -31,10 +17,38 @@ function Header() {
         </div>
         <div className="navbar-right">
           <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li>
+              <Link
+                to="/"
+                className={location.pathname === '/' ? 'active' : ''}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/products"
+                className={location.pathname === '/products' ? 'active' : ''}
+              >
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className={location.pathname === '/about' ? 'active' : ''}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className={location.pathname === '/contact' ? 'active' : ''}
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

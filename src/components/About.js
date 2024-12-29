@@ -10,9 +10,9 @@ const AboutUs = () => {
         <div className="about">
           <div className="head">
             <h2 style={{
-              color: '#555555',
+              color: 'black',
               fontSize: '30px',
-              backgroundColor: 'rgb(219, 219, 219)',
+              backgroundColor: '#e3ecffa3',
               margin: '0 100px'
             }}>About Us</h2>
           </div>
@@ -38,9 +38,9 @@ const AboutUs = () => {
           </p>
         </div>
         <h1 style={{
-          color: '#555555',
+          color: 'black',
           fontSize: '30px',
-          backgroundColor: 'rgb(219, 219, 219)',
+          backgroundColor: '#e3ecffa3',
           margin: '0 100px'
         }}>PRODUCT RANGE</h1>
         <div className="z" style={{ margin: '0 110px' }}>
