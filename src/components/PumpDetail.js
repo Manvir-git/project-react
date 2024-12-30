@@ -71,11 +71,11 @@ const PumpDetail = () => {
     }
 
     if (error) {
-        return <div>{error}. Please go back to the <a href="/home">Home page</a>.</div>; // Show error message
+        return <div>{error}. Please go back to the <a href="/">Home page</a>.</div>; // Show error message
     }
 
     if (!pump) {
-        return <div>Pump not found. Please go back to the <a href="/home">Home page</a>.</div>; // Fallback if no pump data
+        return <div>Pump not found. Please go back to the <a href="/">Home page</a>.</div>; // Fallback if no pump data
     }
 
     return (

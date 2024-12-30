@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     // Smoothly scroll to top when location changes
-    window.scrollTo({ top: 5, behavior: 'smooth' });
+    window.scrollTo({ top: 10, behavior: 'smooth' });
   }, [location]);
 
   return <>{children}</>;
