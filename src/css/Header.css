@@ -83,22 +83,77 @@
     background-color: #3498db; /* Change background on hover */
     color: #ffffff; /* Change text color on hover */
   }
+
+  /* General Responsive Styles for max-width 1080px */
+@media (max-width: 1080px) {
+  .container {
+
+      padding: 0 20px; /* Add padding for smaller screens */
+      max-width: 100%; /* Allow the container to use full width */
+  }
+
+  .logo img {
+      height: 40px; /* Adjust logo size */
+  }
+
+  .company-name {
+      font-size: 1em; /* Slightly smaller font size */
+  }
+
+  .nav-links {
+      gap: 10px; /* Reduce space between links */
+  }
+
+  .nav-links a {
+      font-size: 0.90em; /* Adjust link font size */
+      padding: 7px 8.5px; /* Adjust padding for links */
+  }
+}
+
   
-  /* Responsive Styles */
   @media (max-width: 768px) {
     .container {
-      flex-direction: row; /* Stack logo and links */
-      align-items: flex-start; /* Align items to the start */
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center; /* Center-align content */
+
     }
-  
+
     .navbar-left {
-      font-size: small;
-      margin-bottom: 10px; /* Space between logo and nav links */
+        margin-bottom: 10px; /* Space between logo and nav links */
     }
-  
+
+    .logo img {
+        height: 30px; /* Smaller logo for mobile */
+    }
+
+    .company-name {
+        font-size: 1.2em; /* Slightly smaller text */
+    }
+
     .nav-links {
-      font-size: small;
-      flex-direction: row; /* Stack links vertically */
-      gap: 5px; /* Space between links */
+        flex-wrap: wrap; /* Wrap links for smaller screens */
+        gap: 7px; /* Adjust space between links */
+        justify-content: center;
     }
-  }
+
+    .nav-links a {
+        font-size: .9em; /* Slightly smaller font size for mobile */
+        padding: 6px 10px; /* Adjust padding */
+    }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px; /* Smaller logo */
+    }
+
+    .company-name {
+        font-size: 1em; /* Smaller text size */
+    }
+
+    .nav-links a {
+        font-size: 0.85em; /* Adjust font size for extra small screens */
+        padding: 5px 8px; /* Smaller padding */
+    }
+}
