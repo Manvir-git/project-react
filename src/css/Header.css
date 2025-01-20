@@ -88,7 +88,7 @@
 @media (max-width: 1080px) {
   .container {
 
-      padding: 0 20px; /* Add padding for smaller screens */
+      padding: 0 10px; /* Add padding for smaller screens */
       max-width: 100%; /* Allow the container to use full width */
   }
 
@@ -137,7 +137,7 @@
     }
 
     .nav-links a {
-        font-size: .9em; /* Slightly smaller font size for mobile */
+        font-size: .8em; /* Slightly smaller font size for mobile */
         padding: 6px 10px; /* Adjust padding */
     }
 }
@@ -145,15 +145,17 @@
 /* Ultra Small Devices */
 @media (max-width: 480px) {
     .logo img {
+      margin-top:  10px;
         height: 30px; /* Smaller logo */
     }
 
     .company-name {
+      margin-top: 10px;
         font-size: 1em; /* Smaller text size */
     }
 
     .nav-links a {
-        font-size: 0.85em; /* Adjust font size for extra small screens */
-        padding: 5px 8px; /* Smaller padding */
+        font-size: 0.75em; /* Adjust font size for extra small screens */
+        padding: 5px 9px; /* Smaller padding */
     }
 }

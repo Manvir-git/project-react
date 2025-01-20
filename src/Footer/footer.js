@@ -14,7 +14,7 @@ function Footer() {
           </h2>
           <p>If you have any partnership inquiries, please contact us:</p>
           <p>
-            <i className="fas fa-phone"></i> Phone: <a href="tel:9056662843">9056662843</a>
+            <i className="fas fa-phone"></i><a href="tel:9056662843">+91 9056662843</a>
           </p>
         </div>
 

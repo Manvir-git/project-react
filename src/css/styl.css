@@ -158,12 +158,12 @@ p3 {
     }
 
     .main-content {
-        padding: 1rem;
+        padding: 0rem;
     }
 
     /* Fix grid for mobile */
     .pump-gallery {
-        grid-template-columns: 1fr !important; /* Force single column on mobile */
+        grid-template-columns: 2fr !important; /* Force single column on mobile */
         gap: 1rem; /* Ensure space between items */
     }
 
@@ -207,7 +207,7 @@ p3 {
     }
 
     .main-content {
-        padding: 1.5rem;
+        padding: 0rem;
     }
 
     /* Fix grid for tablets */
