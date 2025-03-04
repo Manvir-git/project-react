@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import prod from '../images/prod.png';
+import prod1 from '../images/prod1.png';
+import prod2 from '../images/prod2.png';
+import prod3 from '../images/prod3.png';
 import pump2 from '../images/pump2.png';
-import bg2 from '../images/Pump3.jpg';
-import bg3 from '../images/Pump2.jpg';
+import desktop1 from '../images/Pump3.jpg';
+import desktop2 from '../images/newbg.jpg';
+import mobile1 from '../images/mobile1.jpeg';
+import mobile2 from '../images/mobile2.jpeg'
 import '../css/styles.css';
 
 function Home() {
   const [residentialPumps, setResidentialPumps] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [bg2, bg3];
+  // const images = [bg2, bg4];
   const navigate = useNavigate();
-
-  // State for animated numbers
   const [inProgressSites, setInProgressSites] = useState(0);
   const [pumpsSold, setPumpsSold] = useState(0);
+   // const [currentIndex, setCurrentIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
+  
+    // Different images for mobile & desktop
+    const desktopImages = [desktop1,desktop2];
+    const mobileImages = [mobile1,mobile2];
+  
+    const images = isMobile ? mobileImages : desktopImages;
 
-  // Fetch pumps data from the backend
   useEffect(() => {
     axios
       .get('https://pumpsbackend.onrender.com/api/pumps')
@@ -50,6 +59,14 @@ function Home() {
     if (topImageSection) {
       topImageSection.classList.add('slide-in');
     }
+  }, []);
+
+  useEffect(() => {
+    // Function to check screen size on resize
+    const handleResize = () => setIsMobile(window.innerWidth < 480);
+    window.addEventListener("resize", handleResize);
+    
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -113,7 +130,7 @@ function Home() {
 
   return (
     <div className="main-content">
-      {/* Main Image Section */}
+      {/* Main Image Section
       <div className="image-section1 animate-on-scroll">
         <div className="slider">
           <div
@@ -135,7 +152,30 @@ function Home() {
             ))}
           </div>
         </div>
+      </div> */}
+
+       <div className="image-section1 animate-on-scroll">
+      <div className="slider">
+        <div
+          className="slider-images"
+          style={{
+            display: "flex",
+            transform: `translateX(-${currentIndex * 100}%)`,
+            transition: "transform 1s ease-in-out",
+          }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Slide ${index}`}
+              className="slider-image"
+              style={{ width: "100%", flexShrink: 0 }}
+            />
+          ))}
+        </div>
       </div>
+    </div>
 
       {/* Product Introduction */}
       <div className="b animate-on-scroll">
@@ -193,11 +233,11 @@ function Home() {
           <div className="side-sections">
             <div className="side-section">
               <h1>{inProgressSites}</h1>
-              <p>In-Progress Sites</p>
+              <h6>In-Progress Sites</h6>
             </div>
             <div className="side-section">
               <h1>{pumpsSold.toLocaleString()}+</h1>
-              <p>Pumps Sold</p>
+              <h6>Pumps Sold</h6>
             </div>
           </div>
         </div>
@@ -211,7 +251,14 @@ function Home() {
         <h5>We Believe Every Client Is a<br />Valuable Long-Term Partner</h5>
       </div>
       <div className="prod animate-on-scroll">
-        <img src={prod} alt="Product Display" />
+        
+      <img className="lastext" src={prod3} alt="Product Display" />
+
+      <div className="product">
+      <img src={prod1} alt="Product Display" />
+      <img src={prod2} alt="Product Display" />
+      </div>
+
       </div>
     </div>
   );

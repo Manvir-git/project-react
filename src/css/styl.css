@@ -28,23 +28,10 @@ body {
 
 
 
-
 /* Gallery Styles */
-.pump-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap: 1.5625rem; /* 25px */
-}
 
-.pump-item {
-    display: grid;
-    background-color: rgb(247, 247, 247);
-    padding: 1.25rem; /* 20px */
-    border-radius: 0.9375rem; /* 15px */
-    text-align: center;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px 5px */
-    transition: transform 0.3s ease;
-}
+
+
 
 .pump-item:hover {
     background-color: #ededed;
@@ -57,24 +44,6 @@ body {
     height: auto;
 }
 
-.pump-item p {
-    font-size: 1.25rem; /* 20px */
-}
-
-.pump-item button {
-    font-size: 0.75rem; /* 12px */
-    display: inline-block;
-    padding: 0.625rem 1.125rem; /* 10px 18px */
-    background-color: #b5b4b4;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 0.3125rem; /* 5px */
-    transition: background-color 0.3s ease;
-}
-
-.pump-item button:hover {
-    background-color: #0088cc;
-}
 
 
 h3 {
@@ -147,54 +116,7 @@ p3 {
 
 /* Media Queries for Responsiveness */
 
-/* Mobile (up to 480px) */
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 2rem; /* 32px */
-    }
 
-    .header p {
-        font-size: 1rem; /* 16px */
-    }
-
-    .main-content {
-        padding: 0rem;
-    }
-
-    /* Fix grid for mobile */
-    .pump-gallery {
-        grid-template-columns: 2fr !important; /* Force single column on mobile */
-        gap: 1rem; /* Ensure space between items */
-    }
-
-    .pump-item {
-        padding: 1rem;
-    }
-
-    .pump-item button {
-        font-size: 0.875rem;
-        padding: 0.75rem 1.25rem;
-    }
-
-    /* Ensure proper image scaling */
-    .pump-item img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .container2 {
-        flex-direction: column;
-    }
-
-    .side-section {
-        flex-basis: 100%;
-        margin-bottom: 1.25rem;
-    }
-
-    .new h5 {
-        font-size: 1.8rem; /* Smaller size on mobile */
-    }
-}
 
 /* Tablet (up to 768px) */
 @media (max-width: 768px) {
@@ -215,9 +137,7 @@ p3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .new h5 {
-        font-size: 2.2rem; /* Adjust for tablet */
-    }
+    
 }
 
 /* Desktop (up to 1024px) */

@@ -11,13 +11,13 @@ import ContactUs from './components/contact';
 import 'font-awesome/css/font-awesome.min.css';
 import PumpDetails from './components/PumpDetails';
 import ContactForm from './components/ContactForm';
-import Layout from './components/Scroll'; // Import the Layout component
+import Layout from './components/Scroll'; 
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: (
-      <Layout> {/* Wrap your main app in the Layout */}
+      <Layout> 
         <App />
       </Layout>
     ),
@@ -40,15 +40,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 
 
-
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import App from './App';
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// root.render(
-
-//     <App />
-
-// );

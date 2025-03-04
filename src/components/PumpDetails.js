@@ -20,6 +20,8 @@ const PumpDetail = () => {
             .catch(error => console.error('Error fetching agricultural pumps:', error));
     }, []);
 
+    
+
     useEffect(() => {
         const fetchPumpDetails = async () => {
             try {

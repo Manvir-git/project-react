@@ -2,6 +2,10 @@
     color: #333;
     background-color: white;
     line-height: 1.6;
+    margin-bottom: 30px;
+    height:auto;
+    max-height:1000px;
+    min-height: 600px;
 }
 
 .product-description {
@@ -16,6 +20,7 @@
 .product-image {
     float: left;
     margin-right: 20px;
+
 }
 .features {
     font-size: 1.3rem;
@@ -111,7 +116,6 @@
     right: 0;
 }
 .chart {
-
     bottom: 0;
 }
 
