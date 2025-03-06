@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import prod1 from '../images/prod1.png';
-import prod2 from '../images/prod2.png';
-import prod3 from '../images/prod3.png';
+import house from '../images/house.png';
+import building from '../images/building.png';
 import pump2 from '../images/pump2.png';
 import desktop1 from '../images/Pump3.jpg';
 import desktop2 from '../images/newbg.jpg';
@@ -250,17 +249,41 @@ function Home() {
       <div className="new animate-on-scroll">
         <h5>We Believe Every Client Is a<br />Valuable Long-Term Partner</h5>
       </div>
-      <div className="prod animate-on-scroll">
-        
-      <img className="lastext" src={prod3} alt="Product Display" />
 
-      <div className="product">
-      <img src={prod1} alt="Product Display" />
-      <img src={prod2} alt="Product Display" />
-      </div>
 
-      </div>
+
+<div className="prod animate-on-scroll">
+  <div className="product-header">
+    <h6>OUR PRODUCTS</h6>
+    <h2>We Offer a Range of Products to Meet All Types of Needs</h2>
+  </div>
+  <div className="product-container">
+  <div className="product-card">
+      <img src={house} alt="Residential" />
+      <h5>RESIDENTIAL</h5>
+      <p>
+        The size of the residential water pump required for a house depends on factors
+        such as the water flow rate needed and the pressure requirements. Assessing the
+        number of fixtures and appliances the pump will supply will help determine the
+        appropriate size.
+      </p>
     </div>
+
+
+    <div className="product-card">
+      <img src={building} alt="Commercial" />
+      <h5>COMMERCIAL</h5>
+      <p>
+        Elevate your agricultural irrigation with Crompton's superior water pumps. Our
+        pumps combine reliability and cutting-edge technology to ensure optimal water
+        supply for all farming and agricultural pumping needs.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+      </div>
   );
 }
 

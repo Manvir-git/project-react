@@ -144,6 +144,19 @@
 
 /* Ultra Small Devices */
 @media (max-width: 480px) {
+  .navbar {
+    background-color: #0c355b; /* Dark background for navbar */
+    color: #ecf0f1; /* Light text color */
+    padding: 15px 30px; /* Adjust padding as needed */
+    position: sticky;
+    top: 0;
+    padding-top: 0%;
+    width: auto;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    margin-bottom: 0; /* Remove any bottom margin */
+    height: auto;
+  }
+
     .logo img {
       margin-top:  10px;
         height: 30px; /* Smaller logo */
