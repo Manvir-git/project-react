@@ -61,7 +61,7 @@ const ContactUs = () => {
             <div className={styles.contactInfo}>
               <div className={styles.contactInfoItem}>
                 <div className={styles.contactInfoIcon}>
-                  <i className="fas fa-map-marker-alt"></i> {/* Address Icon */}
+                  <i className="fas fa-map-marker-alt"> </i> {/* Address Icon */}
                 </div>
                 <div className={styles.contactInfoContent}>
                   <h4>Address</h4>

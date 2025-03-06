@@ -18,15 +18,17 @@ useEffect(() => {
     .catch(error => console.error('Error fetching agricultural pumps:', error));
 }, []);
 
-  const handleScroll = () => {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add('slide-in');
-      }
-    });
-  };
+const handleScroll = () => {
+  const elements = document.querySelectorAll('.animate-on-scroll');
+  elements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+    if (isVisible) {
+      el.classList.add('slide-in');
+    }
+  });
+};
+
   useEffect(() => {
     const topImageSection = document.querySelector('.container1');
     if (topImageSection) {
@@ -36,9 +38,11 @@ useEffect(() => {
 
   // Adding scroll event listener and cleanup
   useEffect(() => {
+    // Run once immediately on mount
+    handleScroll();
+    
+    // Then add scroll listener
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -46,9 +50,10 @@ useEffect(() => {
     <div>
       <div className="main-content" id="mainContent">
         <div className="product-info">
+        <h2>Agricultural Products</h2>
           <div className="container1">
             <div>
-              <h2>Agricultural Products</h2>
+  
             </div>
             <div>
               <p>We offer a wide range of Agricultural submersible pumps to suit your needs.</p>

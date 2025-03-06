@@ -47,7 +47,8 @@ function Home() {
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach((el) => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+      const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+      if (isVisible) {
         el.classList.add('slide-in');
       }
     });
@@ -69,6 +70,10 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    // Run once immediately on mount
+    handleScroll();
+    
+    // Then add scroll listener
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -114,7 +119,7 @@ function Home() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 } // Reduced threshold to 10%
     );
 
     const target = document.querySelector('.container2');

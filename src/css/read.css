@@ -46,11 +46,17 @@
     font-size: 16px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
+    /* Add these fixes */
+    position: relative;
+    z-index: 1;
+    border: 2px solid transparent; /* Add border to maintain layout on hover */
+    box-sizing: border-box;
 }
 
 .buy-button:hover {
     background-color: #00ba19;
     color: beige;
+    cursor: pointer;
 }
 
 
@@ -126,3 +132,166 @@
     display: block;
 }
 
+/* Responsive Styles - Fixed Alignment */
+@media screen and (max-width: 1024px) {
+    .product-description h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .product-description h3 {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .features {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .buy-button {
+        font-size: 15px;
+        padding: 8px 16px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .chart img {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        min-height: 500px;
+        text-align: center;
+    }
+
+    .product-description {
+        margin: 15px;
+        text-align: center;
+    }
+
+    .product-image {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        width: 80%;
+    }
+
+    .features {
+        font-size: 1.1rem;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+
+    .buy-button {
+        font-size: 14px;
+        padding: 8px 14px;
+        margin: 15px auto;
+    }
+
+    .chart img {
+        max-width: 100%;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .body h1 { 
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .product-description h2 {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .features {
+        font-size: 1rem;
+        max-width: 95%;
+        padding-left: 15px;
+    }
+
+    .buy-button {
+        font-size: 13px;
+        padding: 6px 12px;
+        margin: 15px auto;
+        width: 80%;
+        max-width:150px;
+    }
+
+    .chart img {
+        padding-bottom: 20px;
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .left-btn {
+        margin-left: .2rem;
+    }
+
+    .right-btn {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .product-description h2 {
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+
+    .features {
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+
+    .features ul {
+        padding-left: 15px;
+    }
+
+    .buy-button {
+        font-size: 12px;
+        padding: 5px 10px;
+        width: 85%;
+    }
+
+    .nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .product-image {
+        width: 95%;
+    }
+}

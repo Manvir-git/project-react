@@ -155,38 +155,126 @@
   background-color: #0056b3;
 }
 
-/* Styling for the message */
-.popup-content h1 {
-  font-size: 2rem;
-  color: #4CAF50;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: bold;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .contactPage {
+    padding: 20px;
+    background-attachment: fixed;
+  }
+
+  .contactUs {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+    flex: none;
+  }
+
+  .contactInfoItem {
+    padding: 12px;
+  }
+
+  .contactInfoIcon {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75em;
+  }
+
+  .inputBox input,
+  .inputBox textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .inputBox span {
+    font-size: 14px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .inputBox input:focus + span,
+  .inputBox input:not(:placeholder-shown) + span,
+  .inputBox textarea:focus + span,
+  .inputBox textarea:not(:placeholder-shown) + span {
+    top: -8px;
+    left: 8px;
+  }
 }
 
-.popup-content h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+@media screen and (max-width: 480px) {
+  .contactPage {
+    padding: 10px;
+  }
+
+  .contactUs {
+    padding: 15px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5em;
+    margin:auto;
+  }
+
+  .sectionHeader p {
+    font-size: 0.8em;
+  }
+
+  .contactInfoItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactInfoIcon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .inputBox input[type='submit'] {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .contactInfoContent h4 {
+    font-size: 1em;
+  }
+
+  .contactInfoContent p {
+    font-size: 0.9em;
+  }
 }
 
-.popup-content p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
+@media screen and (max-width: 360px) {
+  .contactUs {
+    padding: 10px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.3em;
+  }
+
+  .inputBox input,
+  .inputBox textarea {
+    font-size: 13px;
+  }
+
+  .contactInfoIcon {
+    font-size: 18px;
+  }
 }
 
-.popup.show {
-  opacity: 1;
-  visibility: visible;
-  text-align: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 2px solid #4CAF50;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.popup.show .popup-content {
-  transform: translateY(0);
+/* Ensure proper mobile viewport scaling */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
 }

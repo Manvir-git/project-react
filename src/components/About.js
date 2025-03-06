@@ -9,17 +9,9 @@ const AboutUs = () => {
         <img src={abImage} alt="About Us" />
         <div className="about">
           <div className="head">
-            <h2 style={{
-              color: 'black',
-              fontSize: '30px',
-              backgroundColor: '#e3ecffa3',
-              margin: '0 100px'
-            }}>About Us</h2>
+            <h2>About Us</h2>
           </div>
-          <p style={{
-            textAlign: 'left',
-            margin: '0 150px'
-          }}>
+          <p>
             BS Pumps, a leading manufacturer with over 46 years of experience in pump industry, has highly specialized
             in design and manufacturing know-how of water pumps. The company has an extensive distribution network
             through its authorized dealers. The product range covers a wide application such as domestic, agriculture,
@@ -37,13 +29,8 @@ const AboutUs = () => {
             customers.
           </p>
         </div>
-        <h1 style={{
-          color: 'black',
-          fontSize: '30px',
-          backgroundColor: '#e3ecffa3',
-          margin: '0 100px'
-        }}>PRODUCT RANGE</h1>
-        <div className="z" style={{ margin: '0 110px' }}>
+        <h1>PRODUCT RANGE</h1>
+        <div className="z">
           <div className="a">
             <h3>A. Agricultural Pumpsets</h3>
             <ul>

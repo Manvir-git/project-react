@@ -10,7 +10,7 @@ import ContactUs from './components/contact';
 // import AdminPortal from '../../admin/AdminPortal/AdminPortal';
 import 'font-awesome/css/font-awesome.min.css';
 import PumpDetails from './components/PumpDetails';
-import ContactForm from './components/ContactForm';
+import ContactForm from './components/Enquery';
 import Layout from './components/Scroll'; 
 
 const router = createBrowserRouter([
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       { path: "pumpDetails/:pumpId", element: <PumpDetails /> },
       { path: "about", element: <AboutUs /> },
       { path: "contact", element: <ContactUs /> },
-      { path: "Enquiry", element: <ContactForm /> },
+      { path: "Enquery", element: <ContactForm /> },
     ]
   }
 ]);

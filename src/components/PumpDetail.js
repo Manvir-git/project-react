@@ -93,7 +93,7 @@ const PumpDetail = () => {
                     <h2><strong>MRP:</strong> {pump.price} (Inclusive of all taxes)</h2>
 
                     <div className="features">
-                        <h2>Features</h2>
+                        <h3>Features</h3>
                         <ul>
                             {Array.isArray(pump.features) && pump.features.length > 0 ? (
                                 pump.features.map((feature, index) => (
@@ -105,7 +105,7 @@ const PumpDetail = () => {
                         </ul>
                     </div>
 
-                    <Link to={`/Enquiry`} className="buy-button">Send Enquiry</Link>
+                    <Link to={`/Enquery`} className="buy-button">Send Enquiry</Link>
                            
                     
                 </div>

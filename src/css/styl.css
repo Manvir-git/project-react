@@ -1,37 +1,28 @@
-p1 {
-    margin: 0;
-    padding: 0;
-    color: rgb(92, 92, 92);
-    text-align: left;
-    font-size: 0.9375rem; /* 15px */
-}
 
-h1 {
-    color: #0076b2;
-    text-align: center;
-}
-
-p2 {
-    color: #000000;
-    font-size: 1.125rem; /* 18px */
-}
-
-h4 {
-    color: #0076b2;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-
-
-/* Gallery Styles */
-
-
-
+.container1 {
+    background-color: #e3ecffa3; /* Light gray background */
+      padding: 20px; /* Add spacing inside the container */
+     margin-bottom: 1.3rem; /* Center the container and add vertical spacing */
+      text-align: center; /* Center-align text */
+      max-width: 1200px; /* Limit the width of the container */
+  }
+  
+  .product-info  h2 {
+      text-align: center;
+      margin:auto;
+      font-size: 2.625rem; /* Slightly larger font for the heading */
+      color: #004c86; /* Use a bold color for the heading (e.g., dark blue) */
+      margin-bottom: 10px; /* Add spacing below the heading */
+  }
+  
+  .container1  p {
+      font-size: 22px; /* Larger font size for the paragraph */
+      color: #333; /* Dark gray text color for readability */
+      margin: 0; /* Remove default paragraph margin */
+      line-height: 1.6; /* Improve readability by increasing line height */
+  }
+  
+  
 
 .pump-item:hover {
     background-color: #ededed;
@@ -46,28 +37,13 @@ body {
 
 
 
-h3 {
-    font-weight: 100;
-}
-
-h2 {
-    font-size: 1.875rem; /* 30px */
-    font-weight: 300;
-    text-align: left;
-    margin-right: 5rem; /* 80px */
-}
-
-p3 {
-    text-align: center;
-    padding-left: 5.625rem; /* 90px */
-}
 
 
 
 /* Sliding animation */
 @keyframes slideIn {
     from {
-      transform: translateY(100px); /* Distance for sliding */
+      transform: translateY(60px); /* Distance for sliding */
       opacity: 0;
     }
     to {
@@ -79,8 +55,8 @@ p3 {
   /* Elements before animation */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(100px); /* Matches keyframes start position */
-    transition: opacity 1s ease, transform 0.6s ease; /* Smooth animation */
+    transform: translateY(40px); /* Matches keyframes start position */
+    transition: opacity .1s ease, transform 0.1s ease; /* Smooth animation */
   }
   
   /* Apply when in viewport */
@@ -88,62 +64,80 @@ p3 {
     opacity: 1;
     transform: translateY(0);
   }
-
-  .container1 {
-  background-color: #e3ecffa3; /* Light gray background */
+  
+/* Default styles for large screens (laptops, desktops) */
+.container1 {
+    background-color: #e3ecffa3; /* Light gray background */
     padding: 20px; /* Add spacing inside the container */
-   margin-bottom: 1.3rem; /* Center the container and add vertical spacing */
+    margin-bottom: 1.3rem; /* Center the container and add vertical spacing */
     text-align: center; /* Center-align text */
     max-width: 1200px; /* Limit the width of the container */
 }
 
-.container1  h2 {
+/* Heading styles */
+.container1 h2 {
     text-align: center;
     font-size: 2.625rem; /* Slightly larger font for the heading */
     color: #004c86; /* Use a bold color for the heading (e.g., dark blue) */
     margin-bottom: 10px; /* Add spacing below the heading */
 }
 
-.container1  p {
+/* Paragraph styles */
+.container1 p {
     font-size: 22px; /* Larger font size for the paragraph */
     color: #333; /* Dark gray text color for readability */
     margin: 0; /* Remove default paragraph margin */
     line-height: 1.6; /* Improve readability by increasing line height */
 }
 
-
-  
-
-/* Media Queries for Responsiveness */
-
-
-
-/* Tablet (up to 768px) */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.5rem; /* 40px */
+/* Tablet screens (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .container1 {
+        padding: 15px;
+        max-width: 90%; /* Reduce width for smaller screens */
     }
 
-    .header p {
-        font-size: 1.125rem; /* 18px */
+    .product-info  h2 {
+        font-size: 2.2rem; /* Decrease heading size */
     }
 
-    .main-content {
-        padding: 0rem;
-    }
-
-    /* Fix grid for tablets */
-    .pump-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    
-}
-
-/* Desktop (up to 1024px) */
-@media (max-width: 1024px) {
-    .main-content {
-        padding: 2rem;
+    .container1 p {
+        font-size: 20px; /* Reduce paragraph font size */
     }
 }
 
+/* Mobile screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .container1 {
+        padding: 10px;
+        max-width: 95%; /* Further reduce width */
+    }
+
+    .product-info h2 {
+        font-size: 2rem; /* Decrease heading size */
+    }
+
+    .container1 p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+}
+
+/* Small Mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .container1 {
+        padding: .8rem;
+        max-width: 100%;
+    }
+
+    .product-info  h2 {
+        font-size: 1.4rem; /* Decrease heading size for small screens */
+        text-align: center;
+        margin: auto;
+        margin-bottom: .5rem;
+    }
+
+    .container1 p {
+        font-size: 1rem; /* Adjust paragraph size for readability */
+        line-height: 1.5;
+    }
+}
